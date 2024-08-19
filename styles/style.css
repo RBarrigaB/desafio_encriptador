@@ -1,0 +1,218 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #F3F5FC;
+}
+
+header {
+    height: 9.277343%;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1440px;
+    height: 1024px;
+    box-sizing: border-box;
+    display: flex; /* Cambio */
+    flex-direction: column; /* Cambio */
+}
+
+.logo {
+    max-height: 80px;
+    max-width: 120px;
+    padding-top: 2.77778%;
+    padding-left: 2.7778%;
+    box-sizing: border-box;
+}
+
+.content_container {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 90.72%;
+    gap: 5.55555%;
+}
+
+.input_text {
+    width: 47.22%;
+    height: 92.1875%;
+    margin-left: 12.5%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 3%;
+    position: relative;
+    resize: vertical;
+}
+
+.input_text textarea {
+    margin-top: 13.5593%;
+    align-content: flex-start;
+    width: 84.86%;
+    min-height: 48px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: black;
+    background-color: #F3F5FC;
+}
+
+.input_text textarea::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: black;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 7.09745%;
+    justify-content: center;
+    gap: 3.52%;
+    position: absolute; /* Posiciona los botones al fondo del contenedor */
+    bottom: 10px; /* Ajusta la distancia desde el borde inferior */
+    left: 0;
+    right: 0;
+    padding: 10px; /* Agrega padding para evitar que se peguen a los bordes */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+}
+
+.buttons button {
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+}
+
+#btn_encriptar {
+    background-color: #0A3871;
+    color: white;
+    outline: none;
+    box-shadow: none;
+}
+
+#btn_desencriptar {
+    background-color: #D8DFE8;
+    color: black;
+}
+
+.output_text {
+    width: 27.77777%;
+    height: 92.1875%;
+    border: 0.05px solid black;
+    box-sizing: border-box;
+    margin-right: 2.78%;
+    border-radius: 12px;
+    border: 0.5px solid grey;
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; 
+}
+
+.output_text img {
+    margin-top: 45%;
+}
+
+.no_text_ingresado {
+    margin-top: 3.3898%;
+    margin: 10%;
+    justify-content: center;
+}
+
+.parrafo_superior {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: black; 
+}
+
+.parrafo_inferior {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: black; 
+}
+
+.mostrar_data {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#texto_encriptado_desenecriptado {
+    flex: 1;
+    overflow-y: auto;
+    margin: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: black; 
+}
+
+#input_enc_dec {
+    height: 75%;
+}
+
+#copiar {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+    background-color: none;
+    width: 80%;
+    height: 7.09745%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#texto_copiado {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+    background-color: none;
+    width: 80%;
+    height: 7.09745%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#texto_input {
+    display: none
+}
+
+#texto_copiado {
+    display: none;
+}
+
+#texto_input #texto_copiado {
+    margin-bottom: 50%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+}
+
