@@ -12,15 +12,6 @@ header {
   box-sizing: border-box;
 }
 
-h1 {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 40px;
-  margin: 0;
-  padding: 5%;
-  text-align: center;
-}
-
 .container {
   width: 100%;
   max-width: 1440px;
