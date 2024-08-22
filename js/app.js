@@ -38,8 +38,10 @@ const validar_palabra = (texto) => {
 };
 
 let ultimoTextoProcesado = "";
-let warning_msg = "ERROR. Texto inválido: no se permiten mayúsculas ni caracteres especiales, solo letras minúsculas.";
-let texto_repetido_msg = "NOTA. Texto ya procesado, por favor ingrese uno distinto";
+let warning_msg =
+  "ERROR. Texto inválido: no se permiten mayúsculas ni caracteres especiales, solo letras minúsculas.";
+let texto_repetido_msg =
+  "NOTA. Texto ya procesado, por favor ingrese uno distinto";
 let texto_copiado_exito_msg = "Texto copiado exitosamente";
 let texto_copiado_fallido_msg = "Error al copiar el texto";
 
@@ -90,6 +92,7 @@ const displayData = (action) => {
         elementosDefault[i].removeAttribute("hidden");
       }
       elementoData.setAttribute("hidden", "true");
+      resultadoMostrar.textContent = "";
     }
   }
 };
@@ -102,32 +105,27 @@ document.getElementById("btn_desencriptar").addEventListener("click", () => {
   displayData("desencriptar");
 });
 
-document.getElementById('copiar').addEventListener("click",() => {
+document.getElementById("copiar").addEventListener("click", () => {
   const textoACopiar = document.getElementById(
     "texto_encriptado_desenecriptado"
   ).innerHTML;
-  const msgDivCopiar = document.getElementById('texto_copiado');
-    navigator.clipboard.writeText(textoACopiar).then(() => {
+  const msgDivCopiar = document.getElementById("texto_copiado");
+  navigator.clipboard
+    .writeText(textoACopiar)
+    .then(() => {
       msgDivCopiar.textContent = texto_copiado_exito_msg;
       msgDivCopiar.style.display = "block";
       msgDivCopiar.style.color = "green";
       setTimeout(() => {
         msgDivCopiar.style.display = "none";
       }, 5000);
-    }).catch(err => {
+    })
+    .catch((err) => {
       msgDivCopiar.textContent = texto_copiado_fallido_msg;
       msgDivCopiar.style.display = "block";
       msgDivCopiar.style.color = "red";
       setTimeout(() => {
         msgDivCopiar.style.display = "none";
-    })
-  })
-
-})
-
-console.log(fs_encriptar("gato"));
-console.log(
-  fs_desencriptar(
-    "fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober"
-  )
-);
+      });
+    });
+});
